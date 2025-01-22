@@ -1,7 +1,8 @@
 ﻿CREATE TABLE directors (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
-  country VARCHAR(255) NOT NULL
+  person_id INT,
+  CONSTRAINT person_fk FOREIGN KEY (person_id) REFERENCES people(id)
   )
   
 
+ 

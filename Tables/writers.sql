@@ -1,6 +1,6 @@
 ﻿CREATE TABLE writers (
   id SERIAL PRIMARY KEY,
-  email VARCHAR(255) NOT NULL,
-  name VARCHAR(255) NOT NULL
+  person_id INT,
+  CONSTRAINT person_fk FOREIGN KEY (person_id) REFERENCES people(id)
   )
   

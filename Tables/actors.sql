@@ -1,5 +1,5 @@
 ﻿CREATE TABLE actors (
   id SERIAL PRIMARY KEY,
-  birthdate VARCHAR(255) NOT NULL,
-  name VARCHAR(255) NOT NULL
+  person_id INT,
+  CONSTRAINT person_fk FOREIGN KEY (person_id) REFERENCES people(id)
   )
